@@ -6,7 +6,8 @@ import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import qa.guru.helpers.Attach;
+
+import java.qa.guru.helpers.Attach;
 
 public class TestBaseWithPageObject {
     @BeforeAll

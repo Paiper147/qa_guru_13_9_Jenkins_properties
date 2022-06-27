@@ -1,8 +1,9 @@
 package java.home.pages;
 
 import com.codeborne.selenide.SelenideElement;
-import qa.guru.demoqa.components.CalendarComponent;
-import qa.guru.demoqa.components.ResultsTableComponent;
+
+import java.qa.guru.demoqa.components.CalendarComponent;
+import java.qa.guru.demoqa.components.ResultsTableComponent;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
@@ -13,7 +14,7 @@ public class PracticeFormPage {
     private final CalendarComponent calendarComponent = new CalendarComponent();
     ResultsTableComponent resultsTableComponent = new ResultsTableComponent();
     SelenideElement firstNameInput = $("#firstName");
-    SelenideElement lastNameInput =  $("#lastName");
+    SelenideElement lastNameInput = $("#lastName");
     SelenideElement userEmailInput = $("#userEmail");
     SelenideElement genderInput = $("#genterWrapper");
     SelenideElement userNumberInput = $("#userNumber");
@@ -23,7 +24,7 @@ public class PracticeFormPage {
     SelenideElement pictureInput = $("#uploadPicture");
     SelenideElement currentAddressInput = $("#currentAddress");
 
-    public PracticeFormPage openPage(){
+    public PracticeFormPage openPage() {
         open("/automation-practice-form");
         executeJavaScript("$('footer').remove()");
         executeJavaScript("$('#close-fixedban').remove()");
@@ -31,88 +32,100 @@ public class PracticeFormPage {
         return this;
     }
 
-    public PracticeFormPage setFirstName(String value){
+    public PracticeFormPage setFirstName(String value) {
         firstNameInput.setValue(value);
 
         return this;
     }
-    public PracticeFormPage setLastName(String value){
+
+    public PracticeFormPage setLastName(String value) {
         lastNameInput.setValue(value);
 
         return this;
     }
-    public PracticeFormPage setEmail(String value){
+
+    public PracticeFormPage setEmail(String value) {
         userEmailInput.setValue(value);
 
         return this;
     }
-    public PracticeFormPage setGender(String value){
+
+    public PracticeFormPage setGender(String value) {
         genderInput.$(byText(value)).click();
 
         return this;
     }
-    public PracticeFormPage setMobileNumber(String value){
+
+    public PracticeFormPage setMobileNumber(String value) {
         userNumberInput.setValue(value);
 
         return this;
     }
-    public PracticeFormPage setSubjects(String value){
+
+    public PracticeFormPage setSubjects(String value) {
         subjectsInput.sendKeys(value);
         subjectsInput.pressEnter();
 
         return this;
     }
 
-    public PracticeFormPage setDateOfBirth(String day, String month, String year){
+    public PracticeFormPage setDateOfBirth(String day, String month, String year) {
         dateOfBirthInput.click();
         calendarComponent.setDate(day, month, year);
         return this;
     }
-    public PracticeFormPage setHobbies(String value){
+
+    public PracticeFormPage setHobbies(String value) {
         hobbiesInput.$(byText(value)).click();
 
         return this;
     }
-    public PracticeFormPage setPicture(String value){
+
+    public PracticeFormPage setPicture(String value) {
         pictureInput.uploadFromClasspath(value);
 
         return this;
     }
-    public PracticeFormPage setCurrentAddress(String value){
+
+    public PracticeFormPage setCurrentAddress(String value) {
         currentAddressInput.setValue(value);
 
         return this;
     }
-    public PracticeFormPage setState(String value){
+
+    public PracticeFormPage setState(String value) {
         $("#state").scrollTo().click();
         $("#stateCity-wrapper").$(byText(value)).click();
 
         return this;
     }
-    public PracticeFormPage setCity(String value){
+
+    public PracticeFormPage setCity(String value) {
         $("#city").scrollTo().click();
         $("#stateCity-wrapper").$(byText(value)).click();
 
         return this;
     }
-    public PracticeFormPage submitClick(){
+
+    public PracticeFormPage submitClick() {
         $("#submit").click();
 
         return this;
     }
 
-    public PracticeFormPage checkTitleOfResultPage(String value){
+    public PracticeFormPage checkTitleOfResultPage(String value) {
         $("#example-modal-sizes-title-lg").shouldHave(text(value));
 
         return this;
     }
-    public PracticeFormPage checkResult(String key, String value){
+
+    public PracticeFormPage checkResult(String key, String value) {
         resultsTableComponent.checkResult(key, value);
 
         return this;
     }
 
-    public PracticeFormPage closeClick(){
+    public PracticeFormPage closeClick() {
         $("#closeLargeModal").click();
 
         return this;

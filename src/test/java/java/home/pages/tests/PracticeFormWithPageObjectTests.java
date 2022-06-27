@@ -1,7 +1,8 @@
 package java.home.pages.tests;
 
-import home.pages.PracticeFormPage;
 import org.junit.jupiter.api.Test;
+
+import java.home.pages.PracticeFormPage;
 
 import static io.qameta.allure.Allure.step;
 
