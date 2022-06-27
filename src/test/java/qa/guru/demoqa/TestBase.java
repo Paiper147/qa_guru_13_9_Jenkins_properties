@@ -1,4 +1,4 @@
-package java.qa.guru.demoqa;
+package qa.guru.demoqa;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
@@ -6,8 +6,7 @@ import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.remote.DesiredCapabilities;
-
-import java.qa.guru.helpers.Attach;
+import qa.guru.helpers.Attach;
 
 public class TestBase {
     @BeforeAll
