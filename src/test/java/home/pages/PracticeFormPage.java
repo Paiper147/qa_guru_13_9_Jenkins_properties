@@ -27,6 +27,7 @@ public class PracticeFormPage {
         open("/automation-practice-form");
         executeJavaScript("$('footer').remove()");
         executeJavaScript("$('#close-fixedban').remove()");
+        executeJavaScript("$('#adplus-anchor').remove()");
 
         return this;
     }
