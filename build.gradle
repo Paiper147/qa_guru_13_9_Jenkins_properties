@@ -36,6 +36,7 @@ dependencies {
             "com.codeborne:selenide:$selenideVersion",
             "io.qameta.allure:allure-selenide:$allureSelenide",
             "org.junit.jupiter:junit-jupiter:$junitVersion",
+            'org.aeonbits.owner:owner:1.0.12',
             "org.slf4j:slf4j-simple:$slf4jVersion",
             "com.google.guava:guava:$guavaVersion"
     )
@@ -72,5 +73,11 @@ task properties_test6(type: Test) {
 task hello_test(type: Test) {
     useJUnitPlatform {
         includeTags "hello"
+    }
+}
+
+task owner_test(type: Test) {
+    useJUnitPlatform {
+        includeTags "owner"
     }
 }
