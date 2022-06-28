@@ -21,6 +21,10 @@ public class TestBaseWithPageObject {
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.browserSize = "1519x800";
         Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
+
+        Configuration.baseUrl = System.getProperty("baseUrl","https://demoqa.com");
+        Configuration.browser = System.getProperty("browser", "chrome");
+        Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
     }
 
     @AfterEach
