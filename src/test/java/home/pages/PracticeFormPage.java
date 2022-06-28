@@ -28,6 +28,7 @@ public class PracticeFormPage {
         executeJavaScript("$('footer').remove()");
         executeJavaScript("$('#close-fixedban').remove()");
         executeJavaScript("$('#adplus-anchor').remove()");
+        executeJavaScript("$('#RightSide_Advertisement').remove()");
 
         return this;
     }
