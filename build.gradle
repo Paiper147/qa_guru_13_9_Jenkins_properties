@@ -81,3 +81,9 @@ task owner_test(type: Test) {
         includeTags "owner"
     }
 }
+
+task practiceFormWithPageObjectTests_test(type: Test) {
+    useJUnitPlatform {
+        includeTags "practiceFormWithPageObjectTests"
+    }
+}

@@ -1,6 +1,7 @@
 package home.tests;
 
 import home.pages.PracticeFormPage;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static io.qameta.allure.Allure.step;
@@ -10,6 +11,7 @@ public class PracticeFormWithPageObjectTests extends home.tests.TestBaseWithPage
     PracticeFormPage practiceFormPage = new PracticeFormPage();
 
     @Test
+    @Tag("practiceFormWithPageObjectTests")
     void successfulTestPracticeForm() {
 
         String name = "myName";
