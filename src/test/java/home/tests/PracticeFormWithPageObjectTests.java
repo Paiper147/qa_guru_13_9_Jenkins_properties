@@ -9,6 +9,7 @@ import static io.qameta.allure.Allure.step;
 public class PracticeFormWithPageObjectTests extends home.tests.TestBaseWithPageObject {
 
     PracticeFormPage practiceFormPage = new PracticeFormPage();
+    //some comment
 
     @Test
     @Tag("practiceFormWithPageObjectTests")
