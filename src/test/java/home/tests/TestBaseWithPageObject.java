@@ -29,6 +29,7 @@ public class TestBaseWithPageObject {
         Configuration.baseUrl = System.getProperty("baseUrl", "https://demoqa.com");
         Configuration.browser = System.getProperty("browser", "chrome");
         Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
+        Configuration.browserVersion = System.getProperty("browserVersion", "100");
 
         String login = credentialConfigForPracticeFormWithPageObject.login();
         String password = credentialConfigForPracticeFormWithPageObject.password();
