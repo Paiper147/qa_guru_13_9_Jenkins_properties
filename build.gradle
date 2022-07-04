@@ -92,3 +92,9 @@ task practiceFormWithPageObjectTests_test(type: Test) {
         includeTags "practiceFormWithPageObjectTests"
     }
 }
+
+task successAndFailedPracticeFormWithPageObjectTests_test(type: Test) {
+    useJUnitPlatform {
+        includeTags "successAndFailedPracticeFormWithPageObjectTests"
+    }
+}

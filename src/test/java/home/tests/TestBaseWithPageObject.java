@@ -29,16 +29,21 @@ public class TestBaseWithPageObject {
         Configuration.baseUrl = System.getProperty("baseUrl", "https://demoqa.com");
         Configuration.browser = System.getProperty("browser", "chrome");
         Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
-        Configuration.browserVersion = System.getProperty("browserVersion", "100");
 
+        Configuration.browserVersion = System.getProperty("browserVersion", "100");
         String login = credentialConfigForPracticeFormWithPageObject.login();
         String password = credentialConfigForPracticeFormWithPageObject.password();
+        String remoteWebDriverHttpOrHttps = System.getProperty("remoteWebDriverHttpOrHttps","https://");
         String remoteWebDriverURL = System.getProperty("remoteWebDriverURL","selenoid.autotests.cloud/wd/hub");
-        Configuration.remote = format("https://" + "%s" + ":" + "%s" + "%s",
+        Configuration.remote = remoteWebDriverHttpOrHttps + format("%s" + ":" + "%s" + "%s",
                 login,
                 password,
                 remoteWebDriverURL
         );
+//        Configuration.browserVersion = System.getProperty("browserVersion", "96");
+//        String remoteWebDriverHttpOrHttps = System.getProperty("remoteWebDriverHttpOrHttps","http://");
+//        String remoteWebDriverURL = System.getProperty("remoteWebDriverURL","65.108.161.82:4444");
+//        Configuration.remote = remoteWebDriverHttpOrHttps + remoteWebDriverURL + "/wd/hub";
     }
 
     @AfterEach

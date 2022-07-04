@@ -24,6 +24,9 @@
 *.iml
 
 # Project gen files
+telegram.json
+slack.json
+
 .idea
 .allure/
 .gradle/

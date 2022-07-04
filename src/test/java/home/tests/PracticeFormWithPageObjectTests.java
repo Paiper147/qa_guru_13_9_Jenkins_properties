@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import static io.qameta.allure.Allure.step;
 
-public class PracticeFormWithPageObjectTests extends home.tests.TestBaseWithPageObject {
+public class PracticeFormWithPageObjectTests extends TestBaseWithPageObject {
 
     PracticeFormPage practiceFormPage = new PracticeFormPage();
 
