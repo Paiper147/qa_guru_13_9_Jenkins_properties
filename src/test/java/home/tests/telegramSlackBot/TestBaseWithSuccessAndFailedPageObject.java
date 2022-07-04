@@ -1,4 +1,4 @@
-package home.tests;
+package home.tests.telegramSlackBot;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
@@ -12,7 +12,7 @@ import qa.guru.helpers.Attach;
 
 import static java.lang.String.format;
 
-public class TestBaseWithPageObject {
+public class TestBaseWithSuccessAndFailedPageObject {
     @BeforeAll
     static void beforeAll() {
         SelenideLogger.addListener("allure", new AllureSelenide());
@@ -29,8 +29,8 @@ public class TestBaseWithPageObject {
         Configuration.baseUrl = System.getProperty("baseUrl", "https://demoqa.com");
         Configuration.browser = System.getProperty("browser", "chrome");
         Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
-
         Configuration.browserVersion = System.getProperty("browserVersion", "100");
+
         String login = credentialConfigForPracticeFormWithPageObject.login();
         String password = credentialConfigForPracticeFormWithPageObject.password();
         String remoteWebDriverHttpOrHttps = System.getProperty("remoteWebDriverHttpOrHttps","https://");
@@ -40,10 +40,8 @@ public class TestBaseWithPageObject {
                 password,
                 remoteWebDriverURL
         );
-//        Configuration.browserVersion = System.getProperty("browserVersion", "96");
-//        String remoteWebDriverHttpOrHttps = System.getProperty("remoteWebDriverHttpOrHttps","http://");
-//        String remoteWebDriverURL = System.getProperty("remoteWebDriverURL","65.108.161.82:4444");
-//        Configuration.remote = remoteWebDriverHttpOrHttps + remoteWebDriverURL + "/wd/hub";
+//        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
+
     }
 
     @AfterEach
