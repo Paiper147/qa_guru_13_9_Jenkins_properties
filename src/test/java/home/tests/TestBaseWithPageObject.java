@@ -34,7 +34,7 @@ public class TestBaseWithPageObject {
         String login = credentialConfigForPracticeFormWithPageObject.login();
         String password = credentialConfigForPracticeFormWithPageObject.password();
         String remoteWebDriverURL = System.getProperty("remoteWebDriverURL","selenoid.autotests.cloud/wd/hub");
-        Configuration.remote = format("https://" + "%s" + ":" + "%s" + "%s",
+        Configuration.remote = format("https://" + "%s" + ":" + "%s" + "@" + "%s",
                 login,
                 password,
                 remoteWebDriverURL
